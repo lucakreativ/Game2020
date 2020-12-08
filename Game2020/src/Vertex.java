@@ -7,6 +7,14 @@ public class Vertex {
 		this.y = y;
 	}
 	
+	public double length() {
+		return Math.sqrt(x*x+y*y);
+	}
+	
+	public Vertex skalarMult(double s) {
+		return new Vertex(x*s, y*s);
+	}
+	
 	public String toString() {
 		return "("+x+", "+y+")";
 	}
